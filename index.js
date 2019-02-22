@@ -60,6 +60,7 @@ bot.on("message", async message => {
     let cmd = messageArray[0].toLowerCase();
     let args = messageArray.slice(1);
     let max2 = 1000;
+    let max3 = 0;
 
     if (message.channel.id == "546600847392374785") {
        if (isNaN(message.content) && !message.content.startsWith(prefix)) {
@@ -70,7 +71,13 @@ bot.on("message", async message => {
        if (message.channel.id == "546600847392374785") {
        if(message.content > max2){
          message.delete();
-         message.reply("the number is between 1-1000!").then(msg => msg.delete(3000));
+         message.reply("Guess the number is between **1** - **1000**!").then(msg => msg.delete(3000));
+         return;}
+       }
+       if (message.channel.id == "546600847392374785") {
+       if(message.content < max3){
+         message.delete();
+         message.reply("Guess the number is between **1** - **1000**!").then(msg => msg.delete(3000));
          return;}
        }
   }
