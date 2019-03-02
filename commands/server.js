@@ -7,14 +7,20 @@ module.exports.run = async (bot, message, args) => {
 
   var server = bot.guilds.get('532808886399270912')
 
+  var phrases = [
+    'JOIN OUR DISCORD SERVER!',
+    'THE SUPPORT DISCORD SERVER!'
+  ]
+
+  var phrase = phrases[Math.round(Math.random() * (phrases.length - 1))];
+
 
   let embed = new Discord.RichEmbed()
   .setColor("#77abff")
-  .addField("Server Link", "https://discord.gg/CZK6cDm")
+  .addField("Server Link", `[${phrase}](https://discord.gg/CZK6cDm)`)
   .addField(`Total Members:`, `${server.memberCount}`)
   .addField(`Online Members:`, `${server.members.filter(member => member.presence.status !== "offline").size}`)
   .addField("Bot Status:", `${emoji('tick')}`)
-
 
   message.channel.send(embed)
   function emoji(name) {return bot.emojis.find(emoji => emoji.name === name)
