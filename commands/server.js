@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
 
   var phrases = [
     'JOIN OUR DISCORD SERVER!',
-    'THE SUPPORT DISCORD SERVER!'
+    'Join the support discord server!'
   ]
 
   var phrase = phrases[Math.round(Math.random() * (phrases.length - 1))];
