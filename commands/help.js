@@ -5,7 +5,7 @@ const prefix = botconfig.prefix
 
 module.exports.run = async (bot, message, args) => {
 
-    message.channel.send("```fix\nthe commands for Digit Master\nprefix - n/\ncreate - create a guessing game\ninvite - invite me to your server\nserver - join our support server\nping - check the bots ping status\nNo Category:\nhelp - shows this message\nType n/help command for more info on a command.\n\nYou can also type n/help category for more info on a category.``` ")
+    message.channel.send("```fix\nthe commands for Digit Master\nprefix - n/\ncreate - create a guessing game\ninvite - invite me to your server\nserver - join our support server\nping - check the bots ping status\nNo Category:\nhelp - shows this message\n\nType n/help command for more info on a command.\nYou can also type n/help category for more info on a category.``` ")
 }
 
 
